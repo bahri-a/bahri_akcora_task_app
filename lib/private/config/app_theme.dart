@@ -14,7 +14,7 @@ final class AppTheme {
         ),
       ).copyWith(
           extensions: {AppColor.light},
-          cardTheme: CardTheme(
+          cardTheme: CardThemeData(
             color: AppColor.light.elementBackgroundPrimary,
             margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
@@ -44,7 +44,7 @@ final class AppTheme {
             borderColor: AppColor.light.elementBackgroundPrimary,
             splashColor: Colors.transparent,
           ),
-          dialogTheme: DialogTheme(
+          dialogTheme: DialogThemeData(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
@@ -61,8 +61,7 @@ final class AppTheme {
               borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide.none,
             ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           ),
           appBarTheme: AppBarTheme(
             backgroundColor: AppColor.light.primary,
@@ -77,7 +76,7 @@ final class AppTheme {
         ),
       ).copyWith(
           extensions: {AppColor.dark},
-          cardTheme: CardTheme(
+          cardTheme: CardThemeData(
             color: AppColor.dark.elementBackgroundPrimary,
             margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
@@ -107,7 +106,7 @@ final class AppTheme {
             borderColor: AppColor.dark.elementBackgroundPrimary,
             splashColor: Colors.transparent,
           ),
-          dialogTheme: DialogTheme(
+          dialogTheme: DialogThemeData(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
@@ -137,8 +136,7 @@ final class AppTheme {
               height: 0,
               color: Colors.transparent,
             ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           ),
           outlinedButtonTheme: OutlinedButtonThemeData(
             style: ButtonStyle(
@@ -160,8 +158,7 @@ final class AppTheme {
           ),
           checkboxTheme: CheckboxThemeData(
             checkColor: WidgetStateProperty.all(AppColor.dark.primary),
-            fillColor: WidgetStateProperty.all(
-                AppColor.dark.elementBackgroundSecondary),
+            fillColor: WidgetStateProperty.all(AppColor.dark.elementBackgroundSecondary),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
             ),
@@ -199,8 +196,7 @@ final class AppTheme {
   // hardcoding this here because the fontFamily property returns false values (https://github.com/material-foundation/flutter-packages/issues/141#issuecomment-1236312594)
   static const String _fontFamily = 'Figtree';
 
-  static final TextStyle w100 =
-      _baseFont.copyWith(fontWeight: FontWeight.w100, fontFamily: _fontFamily);
+  static final TextStyle w100 = _baseFont.copyWith(fontWeight: FontWeight.w100, fontFamily: _fontFamily);
   static final TextStyle w200 = _baseFont.copyWith(
     fontWeight: FontWeight.w200,
     fontFamily: _fontFamily,
@@ -236,16 +232,11 @@ final class AppTheme {
 
   static final TextTheme _baseTextTheme = TextTheme(
     displayLarge: w100.copyWith(fontSize: 40, letterSpacing: 0, height: 1.12),
-    displayMedium:
-        w800.copyWith(fontSize: 48, letterSpacing: 0, height: 57.6 / 48),
-    displaySmall:
-        w800.copyWith(fontSize: 32, letterSpacing: 0, height: 38.4 / 32),
-    headlineLarge:
-        w700.copyWith(fontSize: 24, letterSpacing: 0, height: 30 / 24),
-    headlineMedium:
-        w700.copyWith(fontSize: 20, letterSpacing: 0, height: 20 / 18),
-    headlineSmall:
-        w700.copyWith(fontSize: 18, letterSpacing: 0, height: 24 / 18),
+    displayMedium: w800.copyWith(fontSize: 48, letterSpacing: 0, height: 57.6 / 48),
+    displaySmall: w800.copyWith(fontSize: 32, letterSpacing: 0, height: 38.4 / 32),
+    headlineLarge: w700.copyWith(fontSize: 24, letterSpacing: 0, height: 30 / 24),
+    headlineMedium: w700.copyWith(fontSize: 20, letterSpacing: 0, height: 20 / 18),
+    headlineSmall: w700.copyWith(fontSize: 18, letterSpacing: 0, height: 24 / 18),
     titleLarge: w700.copyWith(fontSize: 18, letterSpacing: 0, height: 1.4),
     titleMedium: w800.copyWith(fontSize: 18, letterSpacing: 0, height: 1.4),
     titleSmall: w900.copyWith(fontSize: 18, letterSpacing: 0, height: 1.4),
